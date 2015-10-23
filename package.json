@@ -1,0 +1,26 @@
+{
+  "name": "css-path",
+  "version": "1.0.0",
+  "description": "Get a unique and shortest CSS path to a DOM element",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Dummy test for css-path node module\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zahinize/css-path.git"
+  },
+  "keywords": [
+    "css-path",
+    "unique",
+    "shortest",
+    "csspath",
+    "html"
+  ],
+  "author": "Zahin Omar Alwa <zahin.alwa@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Zahinize/css-path/issues"
+  },
+  "homepage": "https://github.com/Zahinize/css-path#readme"
+}
