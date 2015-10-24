@@ -3,6 +3,8 @@ CSSPath
 
 Get a unique and shortest CSS path to a DOM element
 
+http://zahinize.github.io/css-path/csspath.js
+
 ## Installation
 
 Require JS Module
