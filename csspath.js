@@ -325,7 +325,7 @@
       return CSSPath;
     });
   } else {
-    root = (exports) ? exports : this;
+    root = ((typeof exports !== "undefined") && (exports !== null)) ? exports : this;
     root.CSSPath = CSSPath;
   }
 
