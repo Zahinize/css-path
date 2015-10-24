@@ -92,6 +92,11 @@ Vanilla JS
 
 ## Tests
 
+- Open browser developer tools
+- Wait for page to finish loading
+- Hover over any element of page and check developer console
+- See CSSPath rollin!
+
 Require JS: http://zahinize.github.io/css-path/test/vanilla-js/
 
 Vanilla JS: http://zahinize.github.io/css-path/test/require-js/
