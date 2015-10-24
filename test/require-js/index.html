@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSSPath Library test | Require JS</title>
+	   <meta charset="utf-8">
+	   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	   <meta http-equiv="Content-Language" content="en">
+	   <meta name="viewport" content="width=1020">
+	   <meta content="origin-when-crossorigin" name="referrer">
+	   <title>GitHub</title>
+	   <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
+	   <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+	   <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-114.png">
+	   <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114.png">
+	   <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-144.png">
+	   <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144.png">
+	   <meta property="fb:app_id" content="1401488693436528">
+	   <meta property="og:url" content="https://github.com">
+	   <meta property="og:site_name" content="GitHub">
+	   <meta property="og:title" content="Build software better, together">
+	   <meta property="og:description" content="GitHub is where people build software. More than 11 million people use GitHub to discover, fork, and contribute to over 28 million projects.">
+	   <meta property="og:image" content="https://assets-cdn.github.com/images/modules/open_graph/github-logo.png">
+	   <meta property="og:image:type" content="image/png">
+	   <meta property="og:image:width" content="1200">
+	   <meta property="og:image:height" content="1200">
+	   <meta property="og:image" content="https://assets-cdn.github.com/images/modules/open_graph/github-mark.png">
+	   <meta property="og:image:type" content="image/png">
+	   <meta property="og:image:width" content="1200">
+	   <meta property="og:image:height" content="620">
+	   <meta property="og:image" content="https://assets-cdn.github.com/images/modules/open_graph/github-octocat.png">
+	   <meta property="og:image:type" content="image/png">
+	   <meta property="og:image:width" content="1200">
+	   <meta property="og:image:height" content="620">
+	   <meta property="twitter:site" content="github">
+	   <meta property="twitter:site:id" content="13334762">
+	   <meta property="twitter:creator" content="github">
+	   <meta property="twitter:creator:id" content="13334762">
+	   <meta property="twitter:card" content="summary_large_image">
+	   <meta property="twitter:title" content="GitHub">
+	   <meta property="twitter:description" content="GitHub is where people build software. More than 11 million people use GitHub to discover, fork, and contribute to over 28 million projects.">
+	   <meta property="twitter:image:src" content="https://assets-cdn.github.com/images/modules/open_graph/github-logo.png">
+	   <meta property="twitter:image:width" content="1200">
+	   <meta property="twitter:image:height" content="1200">
+	   <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+	   <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+	   <link rel="assets" href="https://assets-cdn.github.com/">
+	   <link rel="web-socket" href="wss://live.github.com/_sockets/MjcwODYyODpiNDU4NTBkZDBmZDBhNTM0NmQ0NjEzMmYwZTZlMTI0ODoyODUwMDEwMzhiMTcyYTUwYmU3NDNhNzZhZTBkYTM3YjMxOWM4MjhiZGM3ZTNjMGZhNzJkNzljZjZkOGUzYmNm--ed7cd6f1ac4396ef284fabba7f77219f51afd08f">
+	   <meta name="pjax-timeout" content="1000">
+	   <link rel="sudo-modal" href="/sessions/sudo_modal">
+	   <meta name="msapplication-TileImage" content="/windows-tile.png">
+	   <meta name="msapplication-TileColor" content="#ffffff">
+	   <meta name="selected-link" value="/" data-pjax-transient="">
+	   <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
+	   <meta name="google-analytics" content="UA-3769691-2">
+	   <meta content="collector.githubapp.com" name="octolytics-host">
+	   <meta content="github" name="octolytics-app-id">
+	   <meta content="7AA19672:7D71:1C74150:562B9B4B" name="octolytics-dimension-request_id">
+	   <meta content="2708628" name="octolytics-actor-id">
+	   <meta content="Zahinize" name="octolytics-actor-login">
+	   <meta content="af126db52e011bef50db6b8483b65f5ab0c4b49bc1a0df66836f3263a5b2b2fa" name="octolytics-actor-hash">
+	   <meta content="Rails, view, dashboard#index" data-pjax-transient="true" name="analytics-event">
+	   <meta class="js-ga-set" name="dimension1" content="Logged In">
+	   <meta class="js-ga-set" name="dimension4" content="Current repo nav">
+	   <meta name="is-dotcom" content="true">
+	   <meta name="hostname" content="github.com">
+	   <meta name="user-login" content="Zahinize">
+	   <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#4078c0">
+	   <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
+	   <meta content="1ecbdffcca8611a1063cc63d6134bb16124fd434" name="form-nonce">
+	   <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github-0ac1316e47acaf19726c8994485559ed3b3eb52e897c080911aa4fddee18d3b1.css" integrity="sha256-CsExbkesrxlybImUSFVZ7Ts+tS6JfAgJEapP3e4Y07E=" media="all" rel="stylesheet">
+	   <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github2-ed11b2e059c035eff96c8e0662efb7bbcffa8acc4978b0b94a8830b79ddf1736.css" integrity="sha256-7RGy4FnANe/5bI4GYu+3u8/6isxJeLC5Sogwt53fFzY=" media="all" rel="stylesheet">
+	   <meta http-equiv="x-pjax-version" content="da1c7eab35d3e0bf7670bd90c13ffb76">
+	   <link href="/Zahinize.private.atom?token=AClUlBu_Y4uW3cla97qnYJ5FA4eWoti2ks60OM3LwA==" rel="alternate" title="ATOM" type="application/atom+xml">
+	</head>
+	<body>
+
+			   <a href="#start-of-content" tabindex="1" class="accessibility-aid js-skip-to-content">Skip to content</a>
+			   <div class="header header-logged-in true" role="banner">
+			      <div class="container clearfix">
+			         <a class="header-logo-invertocat" href="https://github.com/" data-hotkey="g d" aria-label="Homepage" data-ga-click="Header, go to dashboard, icon:logo">
+			         <span class="mega-octicon octicon-mark-github"></span>
+			         </a>
+			         <div class="site-search  js-site-search" role="search">
+			            <!-- </textarea> --><!-- '"` -->
+			            <form accept-charset="UTF-8" action="/search" class="js-site-search-form" data-global-search-url="/search" data-repo-search-url="" method="get">
+			               <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
+			               <label class="js-chromeless-input-container form-control">
+			                  <div class="scope-badge">This repository</div>
+			                  <input type="text" class="js-site-search-focus  chromeless-input" data-hotkey="s" name="q" placeholder="Search GitHub" aria-label="Search GitHub" data-global-scope-placeholder="Search GitHub" data-repo-scope-placeholder="Search" tabindex="1" autocapitalize="off">
+			               </label>
+			            </form>
+			         </div>
+			         <ul class="header-nav left" role="navigation">
+			            <li class="header-nav-item">
+			               <a href="/pulls" class="js-selected-navigation-item header-nav-link" data-ga-click="Header, click, Nav menu - item:pulls context:user" data-hotkey="g p" data-selected-links="/pulls /pulls/assigned /pulls/mentioned /pulls">
+			               Pull requests
+			               </a>        
+			            </li>
+			            <li class="header-nav-item">
+			               <a href="/issues" class="js-selected-navigation-item header-nav-link" data-ga-click="Header, click, Nav menu - item:issues context:user" data-hotkey="g i" data-selected-links="/issues /issues/assigned /issues/mentioned /issues">
+			               Issues
+			               </a>        
+			            </li>
+			            <li class="header-nav-item">
+			               <a class="header-nav-link" href="https://gist.github.com/" data-ga-click="Header, go to gist, text:gist">Gist</a>
+			            </li>
+			         </ul>
+			         <ul class="header-nav user-nav right" id="user-links">
+			            <li class="header-nav-item">
+			               <span class="js-socket-channel js-updatable-content" data-channel="notification-changed:Zahinize" data-url="/notifications/header">
+			               <a href="/notifications" aria-label="You have unread notifications" class="header-nav-link notification-indicator tooltipped tooltipped-s" data-ga-click="Header, go to notifications, icon:unread" data-hotkey="g n">
+			               <span class="mail-status unread"></span>
+			               <span class="octicon octicon-bell"></span>
+			               </a>  </span>
+			            </li>
+			            <li class="header-nav-item dropdown js-menu-container">
+			               <a class="header-nav-link tooltipped tooltipped-s js-menu-target" href="/new" aria-label="Create new…" data-ga-click="Header, create new, icon:add">
+			               <span class="octicon octicon-plus left"></span>
+			               <span class="dropdown-caret"></span>
+			               </a>
+			               <div class="dropdown-menu-content js-menu-content">
+			                  <ul class="dropdown-menu dropdown-menu-sw">
+			                     <a class="dropdown-item" href="/new" data-ga-click="Header, create new repository">
+			                     New repository
+			                     </a>
+			                     <a class="dropdown-item" href="/organizations/new" data-ga-click="Header, create new organization">
+			                     New organization
+			                     </a>
+			                  </ul>
+			               </div>
+			            </li>
+			            <li class="header-nav-item dropdown js-menu-container">
+			               <a class="header-nav-link name tooltipped tooltipped-s js-menu-target" href="/Zahinize" aria-label="View profile and more" data-ga-click="Header, show menu, icon:avatar">
+			               <img alt="@Zahinize" class="avatar" height="20" src="https://avatars2.githubusercontent.com/u/2708628?v=3&amp;s=40" width="20">
+			               <span class="dropdown-caret"></span>
+			               </a>
+			               <div class="dropdown-menu-content js-menu-content">
+			                  <div class="dropdown-menu  dropdown-menu-sw">
+			                     <div class=" dropdown-header header-nav-current-user css-truncate">
+			                        Signed in as <strong class="css-truncate-target">Zahinize</strong>
+			                     </div>
+			                     <div class="dropdown-divider"></div>
+			                     <a class="dropdown-item" href="/Zahinize" data-ga-click="Header, go to profile, text:your profile">
+			                     Your profile
+			                     </a>
+			                     <a class="dropdown-item" href="/stars" data-ga-click="Header, go to starred repos, text:your stars">
+			                     Your stars
+			                     </a>
+			                     <a class="dropdown-item" href="/explore" data-ga-click="Header, go to explore, text:explore">
+			                     Explore
+			                     </a>
+			                     <a class="dropdown-item" href="/integrations" data-ga-click="Header, go to integrations, text:integrations">
+			                     Integrations
+			                     </a>
+			                     <a class="dropdown-item" href="https://help.github.com" data-ga-click="Header, go to help, text:help">
+			                     Help
+			                     </a>
+			                     <div class="dropdown-divider"></div>
+			                     <a class="dropdown-item" href="/settings/profile" data-ga-click="Header, go to settings, icon:settings">
+			                     Settings
+			                     </a>
+			                     <!-- </textarea> --><!-- '"` -->
+			                     <form accept-charset="UTF-8" action="/logout" class="logout-form" data-form-nonce="1ecbdffcca8611a1063cc63d6134bb16124fd434" method="post">
+			                        <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="ypYc/+rASm2kKdgoJ783vQ+YXEmTwgPbzcqx+rkbltl5YmwTy5eC/PyNm9a42Oe13TmgzsUpEbEZiZU6MwGsAg=="></div>
+			                        <button class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout">
+			                        Sign out
+			                        </button>
+			                     </form>
+			                  </div>
+			               </div>
+			            </li>
+			         </ul>
+			      </div>
+			   </div>
+			   <div id="start-of-content" class="accessibility-aid"></div>
+			   <div id="js-flash-container"></div>
+			   <div role="main" class="main-content">
+			      <div id="js-pjax-container" class="context-loader-container" data-pjax-container="">
+			         <div class="container page-content">
+			            <div id="dashboard" class="columns" data-ga-load="Dashboard, view, context:user">
+			               <div class="news column two-thirds">
+			                  <div class="select-menu account-switcher js-menu-container js-select-menu">
+			                     <button class="btn select-menu-button with-gravatar js-menu-target" aria-haspopup="true" aria-label="Switch account context" type="button" tabindex="0" data-ga-click="Dashboard, click, Opened account context switcher">
+			                        <div class="select-menu-button-gravatar js-select-button-gravatar">
+			                           <img alt="@Zahinize" height="20" src="https://avatars2.githubusercontent.com/u/2708628?v=3&amp;s=40" width="20">
+			                        </div>
+			                        <span class="js-select-button css-truncate css-truncate-target">Zahinize</span>
+			                     </button>
+			                     <div class="select-menu-modal-holder js-menu-content" role="menu" aria-labelledby="context-switch-title" aria-hidden="true">
+			                        <div class="select-menu-modal js-navigation-container">
+			                           <div class="select-menu-header">
+			                              <span class="select-menu-title" id="context-switch-title">Switch dashboard context</span>
+			                              <span class="octicon octicon-x js-menu-close" role="button" aria-label="Close menu"></span>
+			                           </div>
+			                           <div class="select-menu-list js-navigation-container">
+			                              <div class="select-menu-no-results">You don’t belong to any organizations.</div>
+			                           </div>
+			                           <div class="select-menu-list">
+			                              <a href="/account/organizations/new" class="select-menu-item select-menu-action js-navigation-item js-navigation-open" data-ga-click="Dashboard, click, Create org link in context switcher (creating first org) - context:user first:true">
+			                              <span class="select-menu-item-icon octicon octicon-plus"></span>
+			                              <span class="select-menu-item-text js-select-button-text">Create organization</span>
+			                              </a>
+			                           </div>
+			                        </div>
+			                     </div>
+			                  </div>
+			                  <div class="alert issues_comment">
+			                     <div class="body">
+			                        <!-- issue_comment -->
+			                        <span class="mega-octicon octicon-comment-discussion"></span>
+			                        <div class="time">
+			                           <time datetime="2015-10-23T17:23:48Z" is="relative-time" title="Oct 23, 2015, 10:53 PM GMT+5:30">21 hours ago</time>
+			                        </div>
+			                        <div class="title">
+			                           <a href="/ebidel" data-ga-click="News feed, event click, Event click type:IssueCommentEvent target:actor">ebidel</a> commented on issue <a href="/GoogleWebComponents/google-map/issues/210#issuecomment-150638743" data-ga-click="News feed, event click, Event click type:IssueCommentEvent target:issue-comment" title="Fit-to-markers update problems">GoogleWebComponents/google-map#210</a>
+			                        </div>
+			                        <div class="details">
+			                           <a href="/ebidel"><img alt="@ebidel" class="gravatar" height="30" src="https://avatars2.githubusercontent.com/u/238208?v=3&amp;s=60" width="30"></a>
+			                           <div class="message markdown-body">
+			                              <blockquote>
+			                                 <p><a href="https://github.com/emersonbottero" class="user-mention">@emersonbottero</a> this seems to be something else from your original bug report. Possibly related to the switch to iron-list. It's getting very hard …</p>
+			                              </blockquote>
+			                           </div>
+			                        </div>
+			                     </div>
+			                  </div>
+			                  <div class="alert issues_comment">
+			                     <div class="body">
+			                        <!-- issue_comment -->
+			                        <span class="mega-octicon octicon-comment-discussion"></span>
+			                        <div class="time">
+			                           <time datetime="2015-10-23T15:50:52Z" is="relative-time" title="Oct 23, 2015, 9:20 PM GMT+5:30">23 hours ago</time>
+			                        </div>
+			                        <div class="title">
+			                           <a href="/ebidel" data-ga-click="News feed, event click, Event click type:IssueCommentEvent target:actor">ebidel</a> commented on issue <a href="/GoogleWebComponents/google-map/issues/212#issuecomment-150613945" data-ga-click="News feed, event click, Event click type:IssueCommentEvent target:issue-comment" title="google-map-marker does not clean up listeners on detach">GoogleWebComponents/google-map#212</a>
+			                        </div>
+			                        <div class="details">
+			                           <a href="/ebidel"><img alt="@ebidel" class="gravatar" height="30" src="https://avatars2.githubusercontent.com/u/238208?v=3&amp;s=60" width="30"></a>
+			                           <div class="message markdown-body">
+			                              <blockquote>
+			                                 <p>Want to do a PR?</p>
+			                              </blockquote>
+			                           </div>
+			                        </div>
+			                     </div>
+			                  </div>
+			                  <div class="alert create simple">
+			                     <div class="body">
+			                        <!-- create -->
+			                        <div class="simple">
+			                           <span class="octicon octicon-tag"></span>
+			                           <div class="title">
+			                              <a href="/ebidel" data-ga-click="News feed, event click, Event click type:CreateEvent target:actor">ebidel</a> created tag <a href="/GoogleWebComponents/google-map/tree/1.1.5" data-ga-click="News feed, event click, Event click type:CreateEvent target:tag" title="1.1.5">1.1.5</a> at <a href="/GoogleWebComponents/google-map" data-ga-click="News feed, event click, Event click type:CreateEvent target:repo">GoogleWebComponents/google-map</a>
+			                           </div>
+			                           <div class="time">
+			                              <time datetime="2015-10-22T21:44:13Z" is="relative-time" title="Oct 23, 2015, 3:14 AM GMT+5:30">2 days ago</time>
+			                           </div>
+			                        </div>
+			                     </div>
+			                  </div>
+			                  <div class="alert release">
+			                     <div class="body">
+			                        <!-- release -->
+			                        <span class="mega-octicon octicon-tag"></span>
+			                        <div class="time">
+			                           <time datetime="2015-10-22T21:44:13Z" is="relative-time" title="Oct 23, 2015, 3:14 AM GMT+5:30">2 days ago</time>
+			                        </div>
+			                        <div class="title">
+			                           <a href="/ebidel" data-ga-click="News feed, event click, Event click type:ReleaseEvent target:actor">ebidel</a> released <a href="/GoogleWebComponents/google-map/releases/tag/1.1.5" data-ga-click="News feed, event click, Event click type:ReleaseEvent target:release">1.1.5</a> at <a href="/GoogleWebComponents/google-map" data-ga-click="News feed, event click, Event click type:ReleaseEvent target:repo">GoogleWebComponents/google-map</a>
+			                        </div>
+			                        <div class="details">
+			                           <a href="/ebidel"><img alt="@ebidel" class="gravatar" height="30" src="https://avatars2.githubusercontent.com/u/238208?v=3&amp;s=60" width="30"></a>
+			                           <div class="release-assets">
+			                              <ul>
+			                                 <li>
+			                                    <span class="octicon octicon-cloud-download"></span>
+			                                    <div class="message"><a href="/GoogleWebComponents/google-map/archive/1.1.5.zip" data-ga-click="News feed, event click, Event click type:ReleaseEvent target:asset" rel="nofollow">Source code (zip)</a></div>
+			                                 </li>
+			                              </ul>
+			                           </div>
+			                        </div>
+			                     </div>
+			                  </div>
+			                  <div class="alert push">
+			                     <div class="body">
+			                        <!-- push -->
+			                        <span class="mega-octicon octicon-git-commit"></span>
+			                        <div class="time">
+			                           <time datetime="2015-10-22T21:43:40Z" is="relative-time" title="Oct 23, 2015, 3:13 AM GMT+5:30">2 days ago</time>
+			                        </div>
+			                        <div class="title">
+			                           <a href="/ebidel" data-ga-click="News feed, event click, Event click type:PushEvent target:actor">ebidel</a> pushed to <a href="/GoogleWebComponents/google-map/tree/master" data-ga-click="News feed, event click, Event click type:PushEvent target:branch">master</a> at <a href="/GoogleWebComponents/google-map" data-ga-click="News feed, event click, Event click type:PushEvent target:repo">GoogleWebComponents/google-map</a>
+			                        </div>
+			                        <div class="details">
+			                           <a href="/ebidel"><img alt="@ebidel" class="gravatar" height="30" src="https://avatars2.githubusercontent.com/u/238208?v=3&amp;s=60" width="30"></a>
+			                           <div class="commits pusher-is-only-committer">
+			                              <ul>
+			                                 <li>
+			                                    <span title="ebidel">
+			                                    <img alt="@ebidel" height="16" src="https://avatars3.githubusercontent.com/u/238208?v=3&amp;s=32" width="16">
+			                                    </span>
+			                                    <code><a href="/GoogleWebComponents/google-map/commit/3ff5c11d7aa90874d7f0ac75e076f512981ffd26" data-ga-click="News feed, event click, Event click type:PushEvent target:sha">3ff5c11</a></code>
+			                                    <div class="message">
+			                                       <blockquote>
+			                                          1.1.5
+			                                       </blockquote>
+			                                    </div>
+			                                 </li>
+			                              </ul>
+			                           </div>
+			                        </div>
+			                     </div>
+			                  </div>
+			                  <div class="alert issues_closed">
+			                     <div class="body">
+			                        <!-- issues -->
+			                        <span class="mega-octicon octicon-issue-closed"></span>
+			                        <div class="time">
+			                           <time datetime="2015-10-22T21:42:57Z" is="relative-time" title="Oct 23, 2015, 3:12 AM GMT+5:30">2 days ago</time>
+			                        </div>
+			                        <div class="title">
+			                           <a href="/ebidel" data-ga-click="News feed, event click, Event click type:IssuesEvent target:actor">ebidel</a> closed issue <a href="/GoogleWebComponents/google-map/issues/217" data-ga-click="News feed, event click, Event click type:IssuesEvent target:issue" title="Controls position ">GoogleWebComponents/google-map#217</a>
+			                        </div>
+			                        <div class="details">
+			                           <a href="/ebidel"><img alt="@ebidel" class="gravatar" height="30" src="https://avatars2.githubusercontent.com/u/238208?v=3&amp;s=60" width="30"></a>
+			                           <div class="message">
+			                              <blockquote>
+			                                 Controls position 
+			                              </blockquote>
+			                           </div>
+			                        </div>
+			                     </div>
+			                  </div>
+			                  <div class="alert issues_comment">
+			                     <div class="body">
+			                        <!-- issue_comment -->
+			                        <span class="mega-octicon octicon-comment-discussion"></span>
+			                        <div class="time">
+			                           <time datetime="2015-10-22T21:42:57Z" is="relative-time" title="Oct 23, 2015, 3:12 AM GMT+5:30">2 days ago</time>
+			                        </div>
+			                        <div class="title">
+			                           <a href="/ebidel" data-ga-click="News feed, event click, Event click type:IssueCommentEvent target:actor">ebidel</a> commented on issue <a href="/GoogleWebComponents/google-map/issues/217#issuecomment-150364648" data-ga-click="News feed, event click, Event click type:IssueCommentEvent target:issue-comment" title="Controls position ">GoogleWebComponents/google-map#217</a>
+			                        </div>
+			                        <div class="details">
+			                           <a href="/ebidel"><img alt="@ebidel" class="gravatar" height="30" src="https://avatars2.githubusercontent.com/u/238208?v=3&amp;s=60" width="30"></a>
+			                           <div class="message markdown-body">
+			                              <blockquote>
+			                                 <p>Actually <code>JSON.parse('{"zoomControlOptions":{"position":google.maps.ControlPosition.TOP_RIGHT}}')</code> throws an error. So you won't be able to use <code>googl…</code></p>
+			                              </blockquote>
+			                           </div>
+			                        </div>
+			                     </div>
+			                  </div>
+			                  <div class="alert push">
+			                     <div class="body">
+			                        <!-- push -->
+			                        <span class="mega-octicon octicon-git-commit"></span>
+			                        <div class="time">
+			                           <time datetime="2015-10-22T21:42:36Z" is="relative-time" title="Oct 23, 2015, 3:12 AM GMT+5:30">2 days ago</time>
+			                        </div>
+			                        <div class="title">
+			                           <a href="/ebidel" data-ga-click="News feed, event click, Event click type:PushEvent target:actor">ebidel</a> pushed to <a href="/GoogleWebComponents/google-map/tree/master" data-ga-click="News feed, event click, Event click type:PushEvent target:branch">master</a> at <a href="/GoogleWebComponents/google-map" data-ga-click="News feed, event click, Event click type:PushEvent target:repo">GoogleWebComponents/google-map</a>
+			                        </div>
+			                        <div class="details">
+			                           <a href="/ebidel"><img alt="@ebidel" class="gravatar" height="30" src="https://avatars2.githubusercontent.com/u/238208?v=3&amp;s=60" width="30"></a>
+			                           <div class="commits pusher-is-only-committer">
+			                              <ul>
+			                                 <li>
+			                                    <span title="ebidel">
+			                                    <img alt="@ebidel" height="16" src="https://avatars3.githubusercontent.com/u/238208?v=3&amp;s=32" width="16">
+			                                    </span>
+			                                    <code><a href="/GoogleWebComponents/google-map/commit/d2c1bb65e48722d91a98e56804c659a8cae983ea" data-ga-click="News feed, event click, Event click type:PushEvent target:sha">d2c1bb6</a></code>
+			                                    <div class="message">
+			                                       <blockquote>
+			                                          Add docs on additionalMapOptions
+			                                       </blockquote>
+			                                    </div>
+			                                 </li>
+			                              </ul>
+			                           </div>
+			                        </div>
+			                     </div>
+			                  </div>
+			                  <div class="alert issues_comment">
+			                     <div class="body">
+			                        <!-- issue_comment -->
+			                        <span class="mega-octicon octicon-comment-discussion"></span>
+			                        <div class="time">
+			                           <time datetime="2015-10-22T21:36:09Z" is="relative-time" title="Oct 23, 2015, 3:06 AM GMT+5:30">2 days ago</time>
+			                        </div>
+			                        <div class="title">
+			                           <a href="/ebidel" data-ga-click="News feed, event click, Event click type:IssueCommentEvent target:actor">ebidel</a> commented on issue <a href="/GoogleWebComponents/google-map/issues/217#issuecomment-150363205" data-ga-click="News feed, event click, Event click type:IssueCommentEvent target:issue-comment" title="Controls position ">GoogleWebComponents/google-map#217</a>
+			                        </div>
+			                        <div class="details">
+			                           <a href="/ebidel"><img alt="@ebidel" class="gravatar" height="30" src="https://avatars2.githubusercontent.com/u/238208?v=3&amp;s=60" width="30"></a>
+			                           <div class="message markdown-body">
+			                              <blockquote>
+			                                 <p>This is a polymer issue (<a href="https://github.com/Polymer/polymer/issues/2609" class="issue-link" title="JSON attributes with non-primative values are not de-serialized properly ">Polymer/polymer#2609</a>) we'll have to work around.</p>
+			                              </blockquote>
+			                           </div>
+			                        </div>
+			                     </div>
+			                  </div>
+			                  <div class="alert issues_comment">
+			                     <div class="body">
+			                        <!-- issue_comment -->
+			                        <span class="mega-octicon octicon-comment-discussion"></span>
+			                        <div class="time">
+			                           <time datetime="2015-10-22T13:40:10Z" is="relative-time" title="Oct 22, 2015, 7:10 PM GMT+5:30">2 days ago</time>
+			                        </div>
+			                        <div class="title">
+			                           <a href="/ArgenioBonsanto" data-ga-click="News feed, event click, Event click type:IssueCommentEvent target:actor">ArgenioBonsanto</a> commented on issue <a href="/GoogleWebComponents/google-map/issues/216#issuecomment-150226370" data-ga-click="News feed, event click, Event click type:IssueCommentEvent target:issue-comment" title="google-map-direcctions - Uncaught TypeError: window.google.maps.Load is not a function">GoogleWebComponents/google-map#216</a>
+			                        </div>
+			                        <div class="details">
+			                           <a href="/ArgenioBonsanto"><img alt="@ArgenioBonsanto" class="gravatar" height="30" src="https://avatars2.githubusercontent.com/u/15215945?v=3&amp;s=60" width="30"></a>
+			                           <div class="message markdown-body">
+			                              <blockquote>
+			                                 <p>Thanx you, the problems is my version of google-maps, </p>
+			                              </blockquote>
+			                           </div>
+			                        </div>
+			                     </div>
+			                  </div>
+			                  <div class="alert issues_opened">
+			                     <div class="body">
+			                        <!-- issues -->
+			                        <span class="mega-octicon octicon-issue-opened"></span>
+			                        <div class="time">
+			                           <time datetime="2015-10-21T15:44:06Z" is="relative-time" title="Oct 21, 2015, 9:14 PM GMT+5:30">3 days ago</time>
+			                        </div>
+			                        <div class="title">
+			                           <a href="/Bodhiz" data-ga-click="News feed, event click, Event click type:IssuesEvent target:actor">Bodhiz</a> opened issue <a href="/GoogleWebComponents/google-map/issues/217" data-ga-click="News feed, event click, Event click type:IssuesEvent target:issue" title="Controls position ">GoogleWebComponents/google-map#217</a>
+			                        </div>
+			                        <div class="details">
+			                           <a href="/Bodhiz"><img alt="@Bodhiz" class="gravatar" height="30" src="https://avatars0.githubusercontent.com/u/2632229?v=3&amp;s=60" width="30"></a>
+			                           <div class="message">
+			                              <blockquote>
+			                                 Controls position 
+			                              </blockquote>
+			                           </div>
+			                        </div>
+			                     </div>
+			                  </div>
+			                  <div class="alert issues_opened">
+			                     <div class="body">
+			                        <!-- issues -->
+			                        <span class="mega-octicon octicon-issue-opened"></span>
+			                        <div class="time">
+			                           <time datetime="2015-10-21T07:04:03Z" is="relative-time" title="Oct 21, 2015, 12:34 PM GMT+5:30">3 days ago</time>
+			                        </div>
+			                        <div class="title">
+			                           <a href="/piyushpallaw" data-ga-click="News feed, event click, Event click type:IssuesEvent target:actor">piyushpallaw</a> opened issue <a href="/objectivehtml/FlipClock/issues/234" data-ga-click="News feed, event click, Event click type:IssuesEvent target:issue" title="On Page Refresh How to prevent reset of timer">objectivehtml/FlipClock#234</a>
+			                        </div>
+			                        <div class="details">
+			                           <a href="/piyushpallaw"><img alt="@piyushpallaw" class="gravatar" height="30" src="https://avatars2.githubusercontent.com/u/12033410?v=3&amp;s=60" width="30"></a>
+			                           <div class="message">
+			                              <blockquote>
+			                                 On Page Refresh How to prevent reset of timer
+			                              </blockquote>
+			                           </div>
+			                        </div>
+			                     </div>
+			                  </div>
+			                  <div class="alert issues_closed">
+			                     <div class="body">
+			                        <!-- issues -->
+			                        <span class="mega-octicon octicon-issue-closed"></span>
+			                        <div class="time">
+			                           <time datetime="2015-10-21T07:02:14Z" is="relative-time" title="Oct 21, 2015, 12:32 PM GMT+5:30">3 days ago</time>
+			                        </div>
+			                        <div class="title">
+			                           <a href="/piyushpallaw" data-ga-click="News feed, event click, Event click type:IssuesEvent target:actor">piyushpallaw</a> closed issue <a href="/objectivehtml/FlipClock/issues/233" data-ga-click="News feed, event click, Event click type:IssuesEvent target:issue" title="On Page Refresh ">objectivehtml/FlipClock#233</a>
+			                        </div>
+			                        <div class="details">
+			                           <a href="/piyushpallaw"><img alt="@piyushpallaw" class="gravatar" height="30" src="https://avatars2.githubusercontent.com/u/12033410?v=3&amp;s=60" width="30"></a>
+			                           <div class="message">
+			                              <blockquote>
+			                                 On Page Refresh 
+			                              </blockquote>
+			                           </div>
+			                        </div>
+			                     </div>
+			                  </div>
+			                  <div class="alert issues_opened">
+			                     <div class="body">
+			                        <!-- issues -->
+			                        <span class="mega-octicon octicon-issue-opened"></span>
+			                        <div class="time">
+			                           <time datetime="2015-10-21T07:01:34Z" is="relative-time" title="Oct 21, 2015, 12:31 PM GMT+5:30">3 days ago</time>
+			                        </div>
+			                        <div class="title">
+			                           <a href="/piyushpallaw" data-ga-click="News feed, event click, Event click type:IssuesEvent target:actor">piyushpallaw</a> opened issue <a href="/objectivehtml/FlipClock/issues/233" data-ga-click="News feed, event click, Event click type:IssuesEvent target:issue" title="On Page Refresh ">objectivehtml/FlipClock#233</a>
+			                        </div>
+			                        <div class="details">
+			                           <a href="/piyushpallaw"><img alt="@piyushpallaw" class="gravatar" height="30" src="https://avatars2.githubusercontent.com/u/12033410?v=3&amp;s=60" width="30"></a>
+			                           <div class="message">
+			                              <blockquote>
+			                                 On Page Refresh 
+			                              </blockquote>
+			                           </div>
+			                        </div>
+			                     </div>
+			                  </div>
+			                  <div class="alert issues_closed">
+			                     <div class="body">
+			                        <!-- issues -->
+			                        <span class="mega-octicon octicon-issue-closed"></span>
+			                        <div class="time">
+			                           <time datetime="2015-10-20T21:17:10Z" is="relative-time" title="Oct 21, 2015, 2:47 AM GMT+5:30">4 days ago</time>
+			                        </div>
+			                        <div class="title">
+			                           <a href="/ebidel" data-ga-click="News feed, event click, Event click type:IssuesEvent target:actor">ebidel</a> closed issue <a href="/GoogleWebComponents/google-map/issues/216" data-ga-click="News feed, event click, Event click type:IssuesEvent target:issue" title="google-map-direcctions - Uncaught TypeError: window.google.maps.Load is not a function">GoogleWebComponents/google-map#216</a>
+			                        </div>
+			                        <div class="details">
+			                           <a href="/ebidel"><img alt="@ebidel" class="gravatar" height="30" src="https://avatars2.githubusercontent.com/u/238208?v=3&amp;s=60" width="30"></a>
+			                           <div class="message">
+			                              <blockquote>
+			                                 google-map-direcctions - Uncaught TypeError: window.google.maps.Load is not a function
+			                              </blockquote>
+			                           </div>
+			                        </div>
+			                     </div>
+			                  </div>
+			                  <div class="alert issues_comment">
+			                     <div class="body">
+			                        <!-- issue_comment -->
+			                        <span class="mega-octicon octicon-comment-discussion"></span>
+			                        <div class="time">
+			                           <time datetime="2015-10-20T21:17:10Z" is="relative-time" title="Oct 21, 2015, 2:47 AM GMT+5:30">4 days ago</time>
+			                        </div>
+			                        <div class="title">
+			                           <a href="/ebidel" data-ga-click="News feed, event click, Event click type:IssueCommentEvent target:actor">ebidel</a> commented on issue <a href="/GoogleWebComponents/google-map/issues/216#issuecomment-149706113" data-ga-click="News feed, event click, Event click type:IssueCommentEvent target:issue-comment" title="google-map-direcctions - Uncaught TypeError: window.google.maps.Load is not a function">GoogleWebComponents/google-map#216</a>
+			                        </div>
+			                        <div class="details">
+			                           <a href="/ebidel"><img alt="@ebidel" class="gravatar" height="30" src="https://avatars2.githubusercontent.com/u/238208?v=3&amp;s=60" width="30"></a>
+			                           <div class="message markdown-body">
+			                              <blockquote>
+			                                 <p>polygit.org can be used for live jsbins :) <a href="http://jsbin.com/varififele/edit?html,output">http://jsbin.com/varififele/edit?html,output</a> works for me. This is pulling the latest versions from mast…</p>
+			                              </blockquote>
+			                           </div>
+			                        </div>
+			                     </div>
+			                  </div>
+			                  <div class="alert issues_comment">
+			                     <div class="body">
+			                        <!-- issue_comment -->
+			                        <span class="mega-octicon octicon-comment-discussion"></span>
+			                        <div class="time">
+			                           <time datetime="2015-10-20T17:46:12Z" is="relative-time" title="Oct 20, 2015, 11:16 PM GMT+5:30">4 days ago</time>
+			                        </div>
+			                        <div class="title">
+			                           <a href="/ArgenioBonsanto" data-ga-click="News feed, event click, Event click type:IssueCommentEvent target:actor">ArgenioBonsanto</a> commented on issue <a href="/GoogleWebComponents/google-map/issues/216#issuecomment-149644858" data-ga-click="News feed, event click, Event click type:IssueCommentEvent target:issue-comment" title="google-map-direcctions - Uncaught TypeError: window.google.maps.Load is not a function">GoogleWebComponents/google-map#216</a>
+			                        </div>
+			                        <div class="details">
+			                           <a href="/ArgenioBonsanto"><img alt="@ArgenioBonsanto" class="gravatar" height="30" src="https://avatars2.githubusercontent.com/u/15215945?v=3&amp;s=60" width="30"></a>
+			                           <div class="message markdown-body">
+			                              <blockquote>
+			                                 <p>I dont know how import google-map in jsbin man, but if I remove of the code, I see the map, the problems is when i use google-map-direcctions. at t…</p>
+			                              </blockquote>
+			                           </div>
+			                        </div>
+			                     </div>
+			                  </div>
+			                  <div class="alert issues_comment">
+			                     <div class="body">
+			                        <!-- issue_comment -->
+			                        <span class="mega-octicon octicon-comment-discussion"></span>
+			                        <div class="time">
+			                           <time datetime="2015-10-20T16:16:03Z" is="relative-time" title="Oct 20, 2015, 9:46 PM GMT+5:30">4 days ago</time>
+			                        </div>
+			                        <div class="title">
+			                           <a href="/ebidel" data-ga-click="News feed, event click, Event click type:IssueCommentEvent target:actor">ebidel</a> commented on issue <a href="/GoogleWebComponents/google-map/issues/216#issuecomment-149619963" data-ga-click="News feed, event click, Event click type:IssueCommentEvent target:issue-comment" title="google-map-direcctions - Uncaught TypeError: window.google.maps.Load is not a function">GoogleWebComponents/google-map#216</a>
+			                        </div>
+			                        <div class="details">
+			                           <a href="/ebidel"><img alt="@ebidel" class="gravatar" height="30" src="https://avatars2.githubusercontent.com/u/238208?v=3&amp;s=60" width="30"></a>
+			                           <div class="message markdown-body">
+			                              <blockquote>
+			                                 <p><a href="http://jsbin.com/zugofojazo/edit?html,output">http://jsbin.com/zugofojazo/edit?html,output</a>.  The map elements aren' being imported so I can't run the demo. But you have <code>&lt;template is="dom-bind"&gt;</code> …</p>
+			                              </blockquote>
+			                           </div>
+			                        </div>
+			                     </div>
+			                  </div>
+			                  <div class="alert issues_comment">
+			                     <div class="body">
+			                        <!-- issue_comment -->
+			                        <span class="mega-octicon octicon-comment-discussion"></span>
+			                        <div class="time">
+			                           <time datetime="2015-10-20T16:10:11Z" is="relative-time" title="Oct 20, 2015, 9:40 PM GMT+5:30">4 days ago</time>
+			                        </div>
+			                        <div class="title">
+			                           <a href="/ArgenioBonsanto" data-ga-click="News feed, event click, Event click type:IssueCommentEvent target:actor">ArgenioBonsanto</a> commented on issue <a href="/GoogleWebComponents/google-map/issues/216#issuecomment-149618438" data-ga-click="News feed, event click, Event click type:IssueCommentEvent target:issue-comment" title="google-map-direcctions - Uncaught TypeError: window.google.maps.Load is not a function">GoogleWebComponents/google-map#216</a>
+			                        </div>
+			                        <div class="details">
+			                           <a href="/ArgenioBonsanto"><img alt="@ArgenioBonsanto" class="gravatar" height="30" src="https://avatars2.githubusercontent.com/u/15215945?v=3&amp;s=60" width="30"></a>
+			                           <div class="message markdown-body">
+			                              <blockquote>
+			                                 <p>here is the code in jsbin: <a href="http://jsbin.com/wujicaboja/edit?html,output">http://jsbin.com/wujicaboja/edit?html,output</a> thx for your collaborations</p>
+			                              </blockquote>
+			                           </div>
+			                        </div>
+			                     </div>
+			                  </div>
+			                  <div class="alert issues_comment">
+			                     <div class="body">
+			                        <!-- issue_comment -->
+			                        <span class="mega-octicon octicon-comment-discussion"></span>
+			                        <div class="time">
+			                           <time datetime="2015-10-20T15:26:40Z" is="relative-time" title="Oct 20, 2015, 8:56 PM GMT+5:30">4 days ago</time>
+			                        </div>
+			                        <div class="title">
+			                           <a href="/ebidel" data-ga-click="News feed, event click, Event click type:IssueCommentEvent target:actor">ebidel</a> commented on issue <a href="/GoogleWebComponents/google-map/issues/216#issuecomment-149601969" data-ga-click="News feed, event click, Event click type:IssueCommentEvent target:issue-comment" title="google-map-direcctions - Uncaught TypeError: window.google.maps.Load is not a function">GoogleWebComponents/google-map#216</a>
+			                        </div>
+			                        <div class="details">
+			                           <a href="/ebidel"><img alt="@ebidel" class="gravatar" height="30" src="https://avatars2.githubusercontent.com/u/238208?v=3&amp;s=60" width="30"></a>
+			                           <div class="message markdown-body">
+			                              <blockquote>
+			                                 <p>Can you post a jsbin of your code?</p>
+			                              </blockquote>
+			                           </div>
+			                        </div>
+			                     </div>
+			                  </div>
+			                  <div class="alert issues_opened">
+			                     <div class="body">
+			                        <!-- issues -->
+			                        <span class="mega-octicon octicon-issue-opened"></span>
+			                        <div class="time">
+			                           <time datetime="2015-10-20T15:11:09Z" is="relative-time" title="Oct 20, 2015, 8:41 PM GMT+5:30">4 days ago</time>
+			                        </div>
+			                        <div class="title">
+			                           <a href="/ArgenioBonsanto" data-ga-click="News feed, event click, Event click type:IssuesEvent target:actor">ArgenioBonsanto</a> opened issue <a href="/GoogleWebComponents/google-map/issues/216" data-ga-click="News feed, event click, Event click type:IssuesEvent target:issue" title="google-map-direcctions - Uncaught TypeError: window.google.maps.Load is not a function">GoogleWebComponents/google-map#216</a>
+			                        </div>
+			                        <div class="details">
+			                           <a href="/ArgenioBonsanto"><img alt="@ArgenioBonsanto" class="gravatar" height="30" src="https://avatars2.githubusercontent.com/u/15215945?v=3&amp;s=60" width="30"></a>
+			                           <div class="message">
+			                              <blockquote>
+			                                 google-map-direcctions - Uncaught TypeError: window.google.maps.Load is not a function
+			                              </blockquote>
+			                           </div>
+			                        </div>
+			                     </div>
+			                  </div>
+			                  <div class="alert issues_comment">
+			                     <div class="body">
+			                        <!-- issue_comment -->
+			                        <span class="mega-octicon octicon-comment-discussion"></span>
+			                        <div class="time">
+			                           <time datetime="2015-10-20T01:37:28Z" is="relative-time" title="Oct 20, 2015, 7:07 AM GMT+5:30">5 days ago</time>
+			                        </div>
+			                        <div class="title">
+			                           <a href="/emersonbottero" data-ga-click="News feed, event click, Event click type:IssueCommentEvent target:actor">emersonbottero</a> commented on issue <a href="/GoogleWebComponents/google-map/issues/210#issuecomment-149396088" data-ga-click="News feed, event click, Event click type:IssueCommentEvent target:issue-comment" title="Fit-to-markers update problems">GoogleWebComponents/google-map#210</a>
+			                        </div>
+			                        <div class="details">
+			                           <a href="/emersonbottero"><img alt="@emersonbottero" class="gravatar" height="30" src="https://avatars2.githubusercontent.com/u/12377432?v=3&amp;s=60" width="30"></a>
+			                           <div class="message markdown-body">
+			                              <blockquote>
+			                                 <p>Hi again <a href="https://github.com/ebidel" class="user-mention">@ebidel</a>  I tried to replace dom -repeat with iron-list and the error continues. I'm not sure if this is a problem with google-map because …</p>
+			                              </blockquote>
+			                           </div>
+			                        </div>
+			                     </div>
+			                  </div>
+			                  <div class="alert issues_closed">
+			                     <div class="body">
+			                        <!-- pull_request -->
+			                        <span class="mega-octicon octicon-git-pull-request"></span>
+			                        <div class="time">
+			                           <time datetime="2015-10-12T21:05:10Z" is="relative-time" title="Oct 13, 2015, 2:35 AM GMT+5:30">12 days ago</time>
+			                        </div>
+			                        <div class="title">
+			                           <a href="/kinday" data-ga-click="News feed, event click, Event click type:PullRequestEvent target:actor">kinday</a> closed pull request <a href="/objectivehtml/FlipClock/pull/205" data-ga-click="News feed, event click, Event click type:PullRequestEvent target:pull">objectivehtml/FlipClock#205</a>
+			                        </div>
+			                        <div class="details">
+			                           <a href="/kinday"><img alt="@kinday" class="gravatar" height="30" src="https://avatars2.githubusercontent.com/u/1751980?v=3&amp;s=60" width="30"></a>
+			                           <div class="message">
+			                              <blockquote>Organic animation</blockquote>
+			                           </div>
+			                        </div>
+			                     </div>
+			                  </div>
+			                  <div class="alert issues_closed">
+			                     <div class="body">
+			                        <!-- issues -->
+			                        <span class="mega-octicon octicon-issue-closed"></span>
+			                        <div class="time">
+			                           <time datetime="2015-10-12T16:37:52Z" is="relative-time" title="Oct 12, 2015, 10:07 PM GMT+5:30">12 days ago</time>
+			                        </div>
+			                        <div class="title">
+			                           <a href="/nzakas" data-ga-click="News feed, event click, Event click type:IssuesEvent target:actor">nzakas</a> closed issue <a href="/nzakas/computer-science-in-javascript/issues/28" data-ga-click="News feed, event click, Event click type:IssuesEvent target:issue" title="Question about Base64Decode">nzakas/computer-science-in-javascript#28</a>
+			                        </div>
+			                        <div class="details">
+			                           <a href="/nzakas"><img alt="@nzakas" class="gravatar" height="30" src="https://avatars3.githubusercontent.com/u/38546?v=3&amp;s=60" width="30"></a>
+			                           <div class="message">
+			                              <blockquote>
+			                                 Question about Base64Decode
+			                              </blockquote>
+			                           </div>
+			                        </div>
+			                     </div>
+			                  </div>
+			                  <div class="alert issues_comment">
+			                     <div class="body">
+			                        <!-- issue_comment -->
+			                        <span class="mega-octicon octicon-comment-discussion"></span>
+			                        <div class="time">
+			                           <time datetime="2015-10-12T16:37:52Z" is="relative-time" title="Oct 12, 2015, 10:07 PM GMT+5:30">12 days ago</time>
+			                        </div>
+			                        <div class="title">
+			                           <a href="/nzakas" data-ga-click="News feed, event click, Event click type:IssueCommentEvent target:actor">nzakas</a> commented on issue <a href="/nzakas/computer-science-in-javascript/issues/28#issuecomment-147455266" data-ga-click="News feed, event click, Event click type:IssueCommentEvent target:issue-comment" title="Question about Base64Decode">nzakas/computer-science-in-javascript#28</a>
+			                        </div>
+			                        <div class="details">
+			                           <a href="/nzakas"><img alt="@nzakas" class="gravatar" height="30" src="https://avatars3.githubusercontent.com/u/38546?v=3&amp;s=60" width="30"></a>
+			                           <div class="message markdown-body">
+			                              <blockquote>
+			                                 <p>It's probably OK to do that. </p>
+			                              </blockquote>
+			                           </div>
+			                        </div>
+			                     </div>
+			                  </div>
+			                  <div class="alert create simple">
+			                     <div class="body">
+			                        <!-- create -->
+			                        <div class="simple">
+			                           <span class="octicon octicon-tag"></span>
+			                           <div class="title">
+			                              <a href="/ebidel" data-ga-click="News feed, event click, Event click type:CreateEvent target:actor">ebidel</a> created tag <a href="/GoogleWebComponents/google-map/tree/1.1.4" data-ga-click="News feed, event click, Event click type:CreateEvent target:tag" title="1.1.4">1.1.4</a> at <a href="/GoogleWebComponents/google-map" data-ga-click="News feed, event click, Event click type:CreateEvent target:repo">GoogleWebComponents/google-map</a>
+			                           </div>
+			                           <div class="time">
+			                              <time datetime="2015-10-12T15:47:08Z" is="relative-time" title="Oct 12, 2015, 9:17 PM GMT+5:30">12 days ago</time>
+			                           </div>
+			                        </div>
+			                     </div>
+			                  </div>
+			                  <div class="alert release">
+			                     <div class="body">
+			                        <!-- release -->
+			                        <span class="mega-octicon octicon-tag"></span>
+			                        <div class="time">
+			                           <time datetime="2015-10-12T15:47:08Z" is="relative-time" title="Oct 12, 2015, 9:17 PM GMT+5:30">12 days ago</time>
+			                        </div>
+			                        <div class="title">
+			                           <a href="/ebidel" data-ga-click="News feed, event click, Event click type:ReleaseEvent target:actor">ebidel</a> released <a href="/GoogleWebComponents/google-map/releases/tag/1.1.4" data-ga-click="News feed, event click, Event click type:ReleaseEvent target:release">1.1.4</a> at <a href="/GoogleWebComponents/google-map" data-ga-click="News feed, event click, Event click type:ReleaseEvent target:repo">GoogleWebComponents/google-map</a>
+			                        </div>
+			                        <div class="details">
+			                           <a href="/ebidel"><img alt="@ebidel" class="gravatar" height="30" src="https://avatars2.githubusercontent.com/u/238208?v=3&amp;s=60" width="30"></a>
+			                           <div class="release-assets">
+			                              <ul>
+			                                 <li>
+			                                    <span class="octicon octicon-cloud-download"></span>
+			                                    <div class="message"><a href="/GoogleWebComponents/google-map/archive/1.1.4.zip" data-ga-click="News feed, event click, Event click type:ReleaseEvent target:asset" rel="nofollow">Source code (zip)</a></div>
+			                                 </li>
+			                              </ul>
+			                           </div>
+			                        </div>
+			                     </div>
+			                  </div>
+			                  <div class="alert push">
+			                     <div class="body">
+			                        <!-- push -->
+			                        <span class="mega-octicon octicon-git-commit"></span>
+			                        <div class="time">
+			                           <time datetime="2015-10-12T15:44:03Z" is="relative-time" title="Oct 12, 2015, 9:14 PM GMT+5:30">12 days ago</time>
+			                        </div>
+			                        <div class="title">
+			                           <a href="/ebidel" data-ga-click="News feed, event click, Event click type:PushEvent target:actor">ebidel</a> pushed to <a href="/GoogleWebComponents/google-map/tree/master" data-ga-click="News feed, event click, Event click type:PushEvent target:branch">master</a> at <a href="/GoogleWebComponents/google-map" data-ga-click="News feed, event click, Event click type:PushEvent target:repo">GoogleWebComponents/google-map</a>
+			                        </div>
+			                        <div class="details">
+			                           <a href="/ebidel"><img alt="@ebidel" class="gravatar" height="30" src="https://avatars2.githubusercontent.com/u/238208?v=3&amp;s=60" width="30"></a>
+			                           <div class="commits pusher-is-only-committer">
+			                              <ul>
+			                                 <li>
+			                                    <span title="ebidel">
+			                                    <img alt="@ebidel" height="16" src="https://avatars3.githubusercontent.com/u/238208?v=3&amp;s=32" width="16">
+			                                    </span>
+			                                    <code><a href="/GoogleWebComponents/google-map/commit/571392000956d93dddd9e2f6d3eb9593a588f5f0" data-ga-click="News feed, event click, Event click type:PushEvent target:sha">5713920</a></code>
+			                                    <div class="message">
+			                                       <blockquote>
+			                                          Rev 1.1.4
+			                                       </blockquote>
+			                                    </div>
+			                                 </li>
+			                              </ul>
+			                           </div>
+			                        </div>
+			                     </div>
+			                  </div>
+			                  <div class="alert issues_comment">
+			                     <div class="body">
+			                        <!-- issue_comment -->
+			                        <span class="mega-octicon octicon-comment-discussion"></span>
+			                        <div class="time">
+			                           <time datetime="2015-10-12T10:24:20Z" is="relative-time" title="Oct 12, 2015, 3:54 PM GMT+5:30">12 days ago</time>
+			                        </div>
+			                        <div class="title">
+			                           <a href="/j0hj0h" data-ga-click="News feed, event click, Event click type:IssueCommentEvent target:actor">j0hj0h</a> commented on issue <a href="/objectivehtml/FlipClock/issues/13#issuecomment-147359335" data-ga-click="News feed, event click, Event click type:IssueCommentEvent target:issue-comment" title="Changing size?">objectivehtml/FlipClock#13</a>
+			                        </div>
+			                        <div class="details">
+			                           <a href="/j0hj0h"><img alt="@j0hj0h" class="gravatar" height="30" src="https://avatars0.githubusercontent.com/u/3071485?v=3&amp;s=60" width="30"></a>
+			                           <div class="message markdown-body">
+			                              <blockquote>
+			                                 <p>Glad to hear that <a href="https://github.com/jeepnet" class="user-mention">@jeepnet</a></p>
+			                              </blockquote>
+			                           </div>
+			                        </div>
+			                     </div>
+			                  </div>
+			                  <div class="alert issues_comment">
+			                     <div class="body">
+			                        <!-- issue_comment -->
+			                        <span class="mega-octicon octicon-comment-discussion"></span>
+			                        <div class="time">
+			                           <time datetime="2015-10-12T09:18:07Z" is="relative-time" title="Oct 12, 2015, 2:48 PM GMT+5:30">12 days ago</time>
+			                        </div>
+			                        <div class="title">
+			                           <a href="/jeepnet" data-ga-click="News feed, event click, Event click type:IssueCommentEvent target:actor">jeepnet</a> commented on issue <a href="/objectivehtml/FlipClock/issues/13#issuecomment-147342681" data-ga-click="News feed, event click, Event click type:IssueCommentEvent target:issue-comment" title="Changing size?">objectivehtml/FlipClock#13</a>
+			                        </div>
+			                        <div class="details">
+			                           <a href="/jeepnet"><img alt="@jeepnet" class="gravatar" height="30" src="https://avatars0.githubusercontent.com/u/244662?v=3&amp;s=60" width="30"></a>
+			                           <div class="message markdown-body">
+			                              <blockquote>
+			                                 <p>Thanks <a href="https://github.com/j0hj0h" class="user-mention">@j0hj0h</a> ! I added it to my project, and it worked like a charm. </p>
+			                              </blockquote>
+			                           </div>
+			                        </div>
+			                     </div>
+			                  </div>
+			                  <div class="pagination ajax_paginate" data-ga-click="News feed, load more, Load more newsfeed events - page:2"><a href="/dashboard/index/2" class="js-events-pagination">More</a></div>
+			                  <div class="protip">
+			                     <span class="octicon octicon-light-bulb text-muted"></span>
+			                     <strong>ProTip!</strong>
+			                     Edit your feed by updating the users you <a href="/Zahinize/following">follow</a> and repositories you <a href="/watching">watch</a>.
+			                  </div>
+			               </div>
+			               <div class="dashboard-sidebar column one-third">
+			                  <div class="octofication js-notice">
+			                     <div class="message">
+			                        <!-- </textarea> --><!-- '"` -->
+			                        <form accept-charset="UTF-8" action="/account/read_broadcast/2069" class="notice-dismiss js-notice-dismiss" data-form-nonce="1ecbdffcca8611a1063cc63d6134bb16124fd434" data-remote="true" method="post">
+			                           <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="_method" type="hidden" value="put"><input name="authenticity_token" type="hidden" value="baIHDOw3yEMkva5yww8Euwxu4+5dhO3jaKrcmE8Kamcrug73dqhJljyrkxBqNxN78WcInxwuWW/KHgqgBs9jDw=="></div>
+			                           <button type="submit" class="close-button" data-ga-click="Dashboard, dismiss broadcast,  Git Large File Storage v1.0" data-ga-load="Dashboard, load broadcast,  Git Large File Storage v1.0">
+			                           <span class="octicon octicon-x" aria-label="Close"></span>
+			                           </button>
+			                        </form>
+			                        <div class="broadcast-icon">
+			                           <span class="mega-octicon octicon-radio-tower"></span>
+			                           <span class="broadcast-icon-mask left"></span>
+			                           <span class="broadcast-icon-mask right"></span>
+			                        </div>
+			                        <h3><a href="/blog/2069-git-large-file-storage-v1-0" data-ga-click="Dashboard, read broadcast,  Git Large File Storage v1.0"> Git Large File Storage v1.0</a></h3>
+			                        <p>Git LFS is now available for all repositories.</p>
+			                     </div>
+			                     <div class="octofication-more">
+			                        <a href="/blog/broadcasts">
+			                        View <strong>18</strong> new broadcasts
+			                        </a>
+			                     </div>
+			                  </div>
+			                  <div class="boxed-group flush repos user-repos js-repo-filter" id="your_repos" role="navigation">
+			                     <div class="boxed-group-action">
+			                        <a href="/new" class="btn btn-sm btn-primary new-repo" data-ga-click="Dashboard, click, Sidebar header new repo button - context:user">
+			                        <span class="octicon octicon-plus"></span>
+			                        New repository
+			                        </a>          
+			                     </div>
+			                     <h3>Your repositories <span class="counter">6</span></h3>
+			                     <div class="boxed-group-inner">
+			                        <div class="filter-repos filter-bar" role="search">
+			                           <input type="text" id="your-repos-filter" class="filter-input js-filterable-field" placeholder="Find a repository…" aria-label="Find a repository…" tabindex="2">
+			                           <ul class="repo-filterer">
+			                              <li><a href="#" class="repo-filter text-small text-muted js-repo-filter-tab filter-selected" data-filter=".public, li.private" data-ga-click="Dashboard, click, Repo list filter - context:user filter:all">All</a></li>
+			                              <li><a href="#" class="repo-filter text-small text-muted js-repo-filter-tab" data-filter=".public" data-ga-click="Dashboard, click, Repo list filter - context:user filter:public">Public</a></li>
+			                              <li><a href="#" class="repo-filter text-small text-muted js-repo-filter-tab" data-filter=".private" data-ga-click="Dashboard, click, Repo list filter - context:user filter:private">Private</a></li>
+			                              <li><a href="#" class="repo-filter text-small text-muted js-repo-filter-tab" data-filter=".source" data-ga-click="Dashboard, click, Repo list filter - context:user filter:sources">Sources</a></li>
+			                              <li><a href="#" class="repo-filter text-small text-muted js-repo-filter-tab" data-filter=".fork" data-ga-click="Dashboard, click, Repo list filter: forks">Forks</a></li>
+			                           </ul>
+			                        </div>
+			                        <ul id="repo_listing" class="mini-repo-list js-repo-list" data-filterable-for="your-repos-filter" data-filterable-type="substring">
+			                           <li class="public source">
+			                              <a class="mini-repo-list-item css-truncate" href="/Zahinize/css-path" data-ga-click="Dashboard, click, Repo list item click - context:user visibility:public fork:false">
+			                              <span class="repo-icon octicon octicon-repo"></span>
+			                              <span class="repo-and-owner css-truncate-target" title="Zahinize/css-path">
+			                              <span class="repo">css-path</span>
+			                              </span>
+			                              </a>
+			                           </li>
+			                           <li class="public fork">
+			                              <a class="mini-repo-list-item css-truncate" href="/Zahinize/icono" data-ga-click="Dashboard, click, Repo list item click - context:user visibility:public fork:true">
+			                              <span class="repo-icon octicon octicon-repo-forked"></span>
+			                              <span class="repo-and-owner css-truncate-target" title="Zahinize/icono">
+			                              <span class="repo">icono</span>
+			                              </span>
+			                              </a>
+			                           </li>
+			                           <li class="public source">
+			                              <a class="mini-repo-list-item css-truncate" href="/Zahinize/polymer-gmaps" data-ga-click="Dashboard, click, Repo list item click - context:user visibility:public fork:false">
+			                              <span class="repo-icon octicon octicon-repo"></span>
+			                              <span class="repo-and-owner css-truncate-target" title="Zahinize/polymer-gmaps">
+			                              <span class="repo">polymer-gmaps</span>
+			                              </span>
+			                              </a>
+			                           </li>
+			                           <li class="public source">
+			                              <a class="mini-repo-list-item css-truncate" href="/Zahinize/Quizify" data-ga-click="Dashboard, click, Repo list item click - context:user visibility:public fork:false">
+			                              <span class="repo-icon octicon octicon-repo"></span>
+			                              <span class="repo-and-owner css-truncate-target" title="Zahinize/Quizify">
+			                              <span class="repo">Quizify</span>
+			                              </span>
+			                              </a>
+			                           </li>
+			                           <li class="public source">
+			                              <a class="mini-repo-list-item css-truncate" href="/Zahinize/ieCompat.js" data-ga-click="Dashboard, click, Repo list item click - context:user visibility:public fork:false">
+			                              <span class="repo-icon octicon octicon-repo"></span>
+			                              <span class="repo-and-owner css-truncate-target" title="Zahinize/ieCompat.js">
+			                              <span class="repo">ieCompat.js</span>
+			                              </span>
+			                              </a>
+			                           </li>
+			                           <li class="public source">
+			                              <a class="mini-repo-list-item css-truncate" href="/Zahinize/tip.css" data-ga-click="Dashboard, click, Repo list item click - context:user visibility:public fork:false">
+			                              <span class="repo-icon octicon octicon-repo"></span>
+			                              <span class="repo-and-owner css-truncate-target" title="Zahinize/tip.css">
+			                              <span class="repo">tip.css</span>
+			                              </span>
+			                              </a>
+			                           </li>
+			                        </ul>
+			                     </div>
+			                  </div>
+			                  <a class="subscribe-feed" href="/Zahinize.private.atom?token=AClUlBu_Y4uW3cla97qnYJ5FA4eWoti2ks60OM3LwA==" data-ga-click="Dashboard, click, News feed atom/RSS link - context:user"><span class="octicon octicon-rss"></span>Subscribe to <strong>your</strong> news feed</a>
+			               </div>
+			               <!-- /sidebar -->
+			            </div>
+			            <!-- /#dashboard -->
+			         </div>
+			         <!-- /.container -->
+			      </div>
+			      <div class="modal-backdrop"></div>
+			   </div>
+			   <div class="container">
+			      <div class="site-footer" role="contentinfo">
+			         <ul class="site-footer-links right">
+			            <li><a href="https://status.github.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
+			            <li><a href="https://developer.github.com" data-ga-click="Footer, go to api, text:api">API</a></li>
+			            <li><a href="https://training.github.com" data-ga-click="Footer, go to training, text:training">Training</a></li>
+			            <li><a href="https://shop.github.com" data-ga-click="Footer, go to shop, text:shop">Shop</a></li>
+			            <li><a href="https://github.com/blog" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
+			            <li><a href="https://github.com/about" data-ga-click="Footer, go to about, text:about">About</a></li>
+			            <li><a href="https://github.com/pricing" data-ga-click="Footer, go to pricing, text:pricing">Pricing</a></li>
+			         </ul>
+			         <a href="https://github.com" aria-label="Homepage">
+			         <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+			         </a>
+			         <ul class="site-footer-links">
+			            <li>© 2015 <span title="0.04266s from github-fe141-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+			            <li><a href="https://github.com/site/terms" data-ga-click="Footer, go to terms, text:terms">Terms</a></li>
+			            <li><a href="https://github.com/site/privacy" data-ga-click="Footer, go to privacy, text:privacy">Privacy</a></li>
+			            <li><a href="https://github.com/security" data-ga-click="Footer, go to security, text:security">Security</a></li>
+			            <li><a href="https://github.com/contact" data-ga-click="Footer, go to contact, text:contact">Contact</a></li>
+			            <li><a href="https://help.github.com" data-ga-click="Footer, go to help, text:help">Help</a></li>
+			         </ul>
+			      </div>
+			   </div>
+			   <div id="ajax-error-message" class="flash flash-error">
+			      <span class="octicon octicon-alert"></span>
+			      <button type="button" class="flash-close js-flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
+			      <span class="octicon octicon-x"></span>
+			      </button>
+			      Something went wrong with that request. Please try again.
+			   </div>
+			   <script crossorigin="anonymous" integrity="sha256-Fhzsf0y5oYf2bC7Lj1nJCY4q1kRYr5F+xy+dYda4CJs=" src="https://assets-cdn.github.com/assets/frameworks-161cec7f4cb9a187f66c2ecb8f59c9098e2ad64458af917ec72f9d61d6b8089b.js"></script>
+			   <script async="async" crossorigin="anonymous" integrity="sha256-+KM5JabhRF+RUTYtRfLzE/FyyC4zxwp/vicu0MdkMtk=" src="https://assets-cdn.github.com/assets/github-f8a33925a6e1445f9151362d45f2f313f172c82e33c70a7fbe272ed0c76432d9.js"></script>
+			   <div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner hidden">
+			      <span class="octicon octicon-alert"></span>
+			      <span class="signed-in-tab-flash">You signed in with another tab or window. <a href="">Reload</a> to refresh your session.</span>
+			      <span class="signed-out-tab-flash">You signed out in another tab or window. <a href="">Reload</a> to refresh your session.</span>
+			   </div>
+
+		<script type="text/javascript" data-main="assets/js/TestModule" src="assets/js/lib/require.js")"></script>
+	</body>
+</html>
